@@ -1106,6 +1106,48 @@
         }
       }
     },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/buildservice/default/getResourceUploadUrl": {
+      "post": {
+        "tags": [
+          "AppPlatform"
+        ],
+        "description": "Get an resource upload URL for build service, which may be artifacts or source archive.",
+        "operationId": "BuildService_GetResourceUploadUrl",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ServiceNameParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success. The response describes the resource upload URL.",
+            "schema": {
+              "$ref": "#/definitions/ResourceUploadDefinition"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/CloudError"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "BuildService_GetResourceUploadUrl": {
+            "$ref": "./examples/Apps_GetResourceUploadUrl.json"
+          }
+        }
+      }
+    },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}": {
       "get": {
         "tags": [
